@@ -17,7 +17,7 @@ class PetsPage extends Component {
     return (
       <div>
         <Route exact path={`${match.path}`} render={()=>(<PetsList pets={pets}/>)} />
-        
+        <Route path={`${match.path}/:petId`} component={PetsShow}/>
       </div>
     )
   }
