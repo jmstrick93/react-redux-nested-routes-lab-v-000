@@ -13,10 +13,11 @@ class PetsPage extends Component {
   }
 
   render() {
-    let { pets } = this.props
+    let { match, pets } = this.props
     return (
       <div>
-        <PetsList pets={pets} />
+        <Route exact path={`${match.path}`} render={()=>(<PetsList pets={pets}/>)} />
+        
       </div>
     )
   }
