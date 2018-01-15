@@ -13,8 +13,11 @@ class PetsPage extends Component {
   }
 
   render() {
+    let { pets } = this.props
     return (
-      <div>Pets Page</div>
+      <div>
+        <PetsList pets={pets} />
+      </div>
     )
   }
 };
